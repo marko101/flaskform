@@ -1,0 +1,27 @@
+<h1>Zdravo {{ moje_ime }}</h1>
+
+<h2>od naredba jinja imamo 
+    safe
+    capitalize
+    lower
+    upper
+    title
+    trim
+    striptags
+</h2>
+
+<p>{{ naredba_safe | safe }} safe</p>
+<p>{{ naredba_safe | striptags }} striptags</p>
+<p>{{ naredba_safe | striptags | title }} title</p>
+
+<h3>Omiljeni sastojci pice su:</h3>
+{% for sastojci in omiljena_pica %}
+    {% if sastojci == 34 %}
+        {{ sastojci + 100 }}<br/>
+    {% else %}
+    {{ sastojci }}<br/>
+    {% endif %}
+{% endfor %}
+
+<br/><br/>
+{{ omiljena_pica.1 }}
